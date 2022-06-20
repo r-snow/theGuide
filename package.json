@@ -1,0 +1,19 @@
+{
+  "name": "theguide",
+  "version": "1.0.0",
+  "description": "\"The Hitchhiker's Guide to the Galaxy, also known simply as the Guide or the book, is a guidebook for hitch-hikers throughout the Universe.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-snow/theGuide.git"
+  },
+  "author": "Ryan Snow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r-snow/theGuide/issues"
+  },
+  "homepage": "https://github.com/r-snow/theGuide#readme"
+}
