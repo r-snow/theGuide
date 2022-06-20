@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/r-snow/theGuide/issues"
   },
-  "homepage": "https://github.com/r-snow/theGuide#readme"
+  "homepage": "https://github.com/r-snow/theGuide#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
