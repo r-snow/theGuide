@@ -2,13 +2,13 @@
   "name": "theguide",
   "version": "1.0.0",
   "description": "\"The Hitchhiker's Guide to the Galaxy, also known simply as the Guide or the book, is a guidebook for hitch-hikers throughout the Universe.\"",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "server-dev": "npx nodemon ./server/app.js",
-    "start": "node ./server/app.js"
+    "server-dev": "npx nodemon ./server/index.js",
+    "start": "node ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,12 @@
   "dependencies": {
     "@babel/runtime": "^7.18.3",
     "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "lodash": "^4.17.21",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
