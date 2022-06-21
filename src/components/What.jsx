@@ -8,12 +8,14 @@ function App() {
     console.log(search);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    // axios get for entry
+  };
 
   return (
     <form className="what" onSubmit={handleSubmit}>
+      <div>who- what- where- when- why...</div>
       <label>
-        What?...
         <input
           className="input"
           type="text"
@@ -21,7 +23,7 @@ function App() {
           onChange={searchTerm}
         />
       </label>
-      <input className="submit" type="submit" value="Submit" />
+      <input className="submit" type="submit" value="Go!" />
     </form>
   );
 }

@@ -2,6 +2,12 @@ body {
   background-color: #282828;
 }
 
+h1 {
+  color: #00ff66;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+}
+
 .dont-panic {
   position: absolute;
   top: 50%;
@@ -17,16 +23,34 @@ body {
 }
 
 .what {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #00ff66;
-  font-family: "Inconsolata", monospace;
-  font-weight: 900;
-  font-size: 100px;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 30px;
   text-align: center;
+  line-height: 0.85em;
+}
+
+.guide {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #00ff66;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
   line-height: 0.85em;
 }
 
@@ -45,7 +69,7 @@ body {
 input,
 select,
 textarea {
-  font-family: "Inconsolata", monospace;
+  font-family: "VT323", monospace;
   color: #00ff66;
 }
 
