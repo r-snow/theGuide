@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 mongoose.connect("mongodb://localhost/entries");
 
 const db = mongoose.connection;

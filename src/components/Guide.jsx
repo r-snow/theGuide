@@ -13,11 +13,12 @@ function App() {
     console.log(entry);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
     axios
       .post("/entry", entry)
       .then((response) => console.log(response))
       .cathc((err) => console.log(err));
+    event.preventDefault();
   };
 
   return (
@@ -38,6 +39,15 @@ function App() {
           className="input"
           type="text"
           name="title"
+          onChange={searchTerm}
+        />
+      </label>
+      <label>
+        entry:
+        <input
+          className="input"
+          type="text"
+          name="entry"
           onChange={searchTerm}
         />
       </label>

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const entrySchema = mongoose.Schema({
   keyword: String,
   title: String,
+  entry: String,
   location: {
     longitude: String,
     latitude: String,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header.jsx";
-import What from "./components/What.jsx";
+import What from "./components/Hiker.jsx";
 import Guide from "./components/Guide.jsx";
 
 function App() {
