@@ -1,34 +1,28 @@
 import React, { useState } from "react";
-import What from "./components/what";
 
 function App() {
-  const [welcome, setWelcome] = useState(true);
+  const [search, setSearch] = useState();
 
-  const handleWelcomeClick = () => setWelcome(false);
-
-  const handleWelcomeKeyPress = (event) => {
-    event.preventDefault();
-    if (event.key === "Enter") {
-      setWelcome(false);
-    }
+  const searchTerm = (event) => {
+    setSearch(event.target.value);
+    console.log(search);
   };
 
+  const handleSubmit = () => {};
+
   return (
-    <div>
-      {welcome ? (
-        <div
-          className="dont-panic"
-          onClick={handleWelcomeClick}
-          onKeyPress={handleWelcomeKeyPress}
-          role="button"
-          tabIndex={0}
-        >
-          <p>DON&apos;T PANIC</p>
-        </div>
-      ) : (
-        <What />
-      )}
-    </div>
+    <form className="what" onSubmit={handleSubmit}>
+      <label>
+        What?...
+        <input
+          className="input"
+          type="text"
+          name="what"
+          onChange={searchTerm}
+        />
+      </label>
+      <input className="submit" type="submit" value="Submit" />
+    </form>
   );
 }
 

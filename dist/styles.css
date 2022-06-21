@@ -15,3 +15,42 @@ body {
   text-align: center;
   line-height: 0.85em;
 }
+
+.what {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #00ff66;
+  font-family: "Inconsolata", monospace;
+  font-weight: 900;
+  font-size: 100px;
+  text-align: center;
+  line-height: 0.85em;
+}
+
+.input {
+  background-color: #1d1d1d;
+  caret-color: #00ff66;
+  box-shadow: none !important;
+}
+
+.input:focus {
+  outline: none !important;
+  border: none !important;
+  /* box-shadow: 0 0 5px #00ff66; */
+}
+
+input,
+select,
+textarea {
+  font-family: "Inconsolata", monospace;
+  color: #00ff66;
+}
+
+.submit {
+  background-color: #1d1d1d;
+  caret-color: #00ff66;
+  box-shadow: none !important;
+}

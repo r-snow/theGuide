@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import What from "./components/what";
+import What from "./components/What.jsx";
 
 function App() {
   const [welcome, setWelcome] = useState(true);
