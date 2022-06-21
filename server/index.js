@@ -2,8 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 const db = require("../database");
+const path = require("path");
 
 const { findEntryAndUpdate, findEntry } = require("../database/models/entries");
 
@@ -13,7 +13,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "/../client/dist")));
+app.use(express.static(path.join(__dirname, "/../dist")));
 
 // app.post("/entries", (req, res) => {
 //   findEntryAndUpdate(req.body).then(() => res.status(201).send());
