@@ -9,9 +9,8 @@ const findEntryAndUpdate = ({
   height,
   links,
   guide,
-}) => {
-  console.log("getting to post controller");
-  return Entry.findOneAndUpdate(
+}) =>
+  Entry.findOneAndUpdate(
     { title },
     {
       $set: {
@@ -26,13 +25,11 @@ const findEntryAndUpdate = ({
       },
     },
     { new: true, upsert: true, useFindAndModify: false }
-    // (err, data) => {
-    //   if (err) {
-    //     return console.log(err);
-    //   }
-    //   return console.log(`Updated/Added Entry ${data}`);
-    // }
-  );
-};
+  ).then((err, data) => {
+    if (err) {
+      return console.log(err);
+    }
+    return console.log(`Updated/Added Entry ${data}`);
+  });
 
 module.exports = findEntryAndUpdate;

@@ -6,6 +6,7 @@ const path = require("path");
 const db = require("../database");
 
 const findEntryAndUpdate = require("../database/controllers/entry");
+const findEntry = require("../database/controllers/findEntry");
 
 const app = express();
 const PORT = 3000;
@@ -17,11 +18,15 @@ app.use(express.static(path.join(__dirname, "/../dist")));
 
 app.post("/entry", (req, res) => {
   console.log(req.body);
-  findEntryAndUpdate(req.body).then(() => res.status(201).send());
+  findEntryAndUpdate(req.body)
+    .then((data) => res.status(201).send(data))
+    .catch((err) => console.log(err));
 });
 
-app.get("/entries", (req, res) => {
-  findEntry(req.body).then(() => res.status(201).send());
+app.get("/entry/:title", (req, res) => {
+  findEntry(req.params.title)
+    .then((data) => res.status(201).send(data))
+    .catch((err) => console.log(err));
 });
 
 app.listen(PORT, () => {

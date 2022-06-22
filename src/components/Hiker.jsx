@@ -1,31 +1,55 @@
 import React, { useState } from "react";
+import axios from "axios";
+import Entry from "./Entry.jsx";
 
-function App() {
+function Hiker({ setHiker, setGuide, setWelcome }) {
   const [search, setSearch] = useState();
+  const [entry, setEntry] = useState();
 
   const searchTerm = (event) => {
     setSearch(event.target.value);
-    console.log(search);
   };
 
-  const handleSubmit = () => {
-    // axios get for entry
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .get(`/entry/${search}`)
+      .then((response) => setEntry(response.data))
+      .catch((err) => console.log(err));
+    const whatInput = document.getElementById("what");
+    whatInput.value = "";
   };
 
   return (
-    <form className="what" onSubmit={handleSubmit}>
-      <div>who- what- where- when- why...</div>
-      <label>
-        <input
-          className="input"
-          type="text"
-          name="what"
-          onChange={searchTerm}
-        />
-      </label>
-      <input className="submit" type="submit" value="Go!" />
-    </form>
+    <div>
+      <form className="hiker" onSubmit={handleSubmit}>
+        <div className="whoWhat">
+          who-
+          <br /> what-
+          <br /> where-
+          <br /> when-
+          <br /> why...
+        </div>
+        <label>
+          <input
+            className="input"
+            type="text"
+            name="what"
+            onChange={searchTerm}
+            placeholder="[search]"
+            id="what"
+          />
+        </label>
+        <input className="submit" type="submit" value="Go!" />
+      </form>
+      {entry && (
+        <div>
+          <div className="console">---------------------------------</div>
+          <Entry entry={entry} />
+        </div>
+      )}
+    </div>
   );
 }
 
-export default App;
+export default Hiker;

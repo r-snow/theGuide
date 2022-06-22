@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function App({ setHiker, setGuide, setWelcome }) {
+function Header({ setHiker, setGuide, setWelcome }) {
   const onHikerClick = () => {
     setHiker(true);
     setWelcome(false);
@@ -14,11 +14,11 @@ function App({ setHiker, setGuide, setWelcome }) {
   };
 
   return (
-    <header id="header">
+    <header className="header">
       <h1 onClick={onHikerClick}>hiker-</h1>
       <h1 onClick={onGuideClick}>guide-</h1>
     </header>
   );
 }
 
-export default App;
+export default Header;
